@@ -1,10 +1,8 @@
 package com.se.gktemplate.controller;
 
 import java.util.Arrays;
-import java.util.Map;
 
 import javax.jms.JMSException;
-import javax.jms.Message;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,9 +21,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
-import com.google.gson.Gson;
 import com.se.gktemplate.entity.Book;
 
 @RestController

@@ -1,0 +1,24 @@
+version: "3"
+services:
+  web: 
+    build: .
+    ports:
+      - "8000-8999:8080"
+    image: "gktest:0.0.1" 
+    restart: always
+    environment:
+     MYSQL_HOST: "mysqldb"
+     MYSQL_USER: "root"
+     MYSQL_PASSWORD: "sapassword"
+     MYSQL_PORT: "3306"
+ 
+  mysqldb:
+   container_name: "mysqldb"
+   image: "mysql"
+   volumes:
+      - D:/Data/TaiLieu/hk1n4/KTTKPM:/var/lib/mysql
+   ports:
+   - "3307:3306"
+   environment:
+    MYSQL_DATABASE: "bookdb"
+    MYSQL_ROOT_PASSWORD: "sapassword"
